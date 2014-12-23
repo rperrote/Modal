@@ -1,0 +1,61 @@
+{
+	"text" : {
+		"element" : "p",
+		"objAttrs": {
+			"innerHTML" : "data",
+			"id" : "'modal-content'"
+		},		
+		"dfts" : {
+			"shape" : "'modalShape-dft'",
+			"shapeStyle" : "'modalStyle-dft'",
+			"layout" : "'modalType-dft'",
+			"icon" : "''",
+			"mb_clase" : "'modalContent-dft'",
+			"acc" : "'Ventana modal abierta. Presiona escape para cerrar la ventana'"
+		}
+	},
+	"image" : {
+		"element" : "img",
+		"objAttrs" : {
+			"onload" : "function() {modal.md.style.width = this.width + 'px'; modal.mi.style.width = this.width + 'px'; modal.mb.appendChild(this); modal.display('block'); jQuery('#modal-content').focus(); };",
+			"src" : "data"
+		},	
+		"attrs" : {
+			"'onclick'" : "args.content.onClick"
+		},
+		"dfts" : {
+			"shape" : "'modalShape-image'",
+			"shapeStyle" : "''",
+			"layout" : "''",
+			"icon" : "''",
+			"mb_clase" : "'modalContent-image'",
+			"acc" : "'Ventana modal abierta. Presiona escape para cerrar la ventana'"
+		}
+	},
+	"iframe" : {
+		"element" : "iframe",
+		"objAttrs" :{
+			"id": "'mFrame-content'",
+			"width": "args.content.width",
+			"height": "args.content.height",
+			"src" : "data"
+		},
+		"attrs" : {
+			"'frameborder'" : "'0'",
+			"'allowfullscreen'" : "''",
+			"'mozallowfullscreen'" : "''",
+			"'webkitallowfullscreen'" : "''",
+			"'hspace'" : "'0'",
+			"'vspace'" : "'0'",
+			"'scrolling'" : "'auto'"
+		},
+		"dfts" : {
+			"shape" : "'modalShape-dft'",
+			"shapeStyle" : "'modalStyle-dft'",
+			"layout" : "'modalType-dft'",
+			"icon" : "''",
+			"mb_clase" : "'modalContent-dft'",
+			"acc" : "'Ventana modal abierta. Presiona escape para cerrar la ventana'"
+		}
+	}
+}
