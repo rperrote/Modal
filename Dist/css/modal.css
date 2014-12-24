@@ -1,5 +1,5 @@
-/* Modal Default */
 #modal-outer {bottom: 0; display: none; left: 0; outline: 0 none; overflow-x: auto; overflow-y: scroll; position: fixed; right: 0; top: 0; height: 100%; width: 100%; z-index: 1050; }
+#modal-outer *:focus {outline:0px;}
 #modal-inner {margin: 0 auto; position: relative; top: 20%; transform: translate(0px, 0px); transition: transform 0.3s ease-out 0s; }
 #modal-content {display: inline-block;}
 #overlay {background-color: #000; bottom: 0; left: 0; position: fixed; right: 0; top: 0; z-index: 1040; transition: opacity 0.15s linear 0s; opacity: 0.5; filter: alpha(opacity=50); }

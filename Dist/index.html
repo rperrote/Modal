@@ -4,18 +4,16 @@
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
 	<link href="css/modal.css" rel="stylesheet" type="text/css"/>
 	<link href="css/modal-common.css" rel="stylesheet" type="text/css"/>
-	<link href="css/mediaelementplayer.css" rel="stylesheet" type="text/css"/>
 	<script src="js/jquery-1.9.1.min.js"></script>
-	<script src="js/mediaelement-and-player.min.js"></script>
+    <style type="text/css" media="all">
+        #content div{
+            margin-bottom: 20px;
+        }
+    </style>
 	<script type="text/javascript">
 		function modalLA () {
-			/* Texto */
-			/*jQuery().modal({"width": "auto",header:{"icon":"user"},"content": {"type":"text","data": document.getElementById('msj').value },"btns": [{"className": "aceptar","value":"Cerrar"},{"className": "aceptar","value":"Cerrar"}]});*/
-			/* Image */
-			/*jQuery().modal({"width": "auto","header":{"icon":"none"},"content": {"type":"image", "data": "http://lorempixel.com/400/200/","type": "image"}});*/
-
 			/* Iframe */
-			jQuery().modal({"width": "auto","header":{"icon":"none"},"content": {"data": "https://www.youtube.com/watch?v=SeMKKprqCFY","type":"iframe" },"shape":{"className":"iframe"},"btns": [{"className": "aceptar","value":"Cerrar"},{"className": "aceptar","value":"Cerrar"}]});
+// 			
 			/*jQuery().modal({"width": "auto","header":{"icon":"none"},"content": {"data": "http://img-9gag-ftw.9cache.com/photo/ae37owj_460sv.mp4","type":"video","ext":"video/mp4","width":"400","height":"214" },"shape":{"className":"image"}});*/
 
 
@@ -23,8 +21,23 @@
 	</script>
 </head>
 <body>
-<input type="text" id="msj">
-<button onclick="modalLA()">Modal</button>
+<div id="content">
+    <div id="text">
+        *************** MODAL TEXTO *******************<br>
+        Mensaje a mostrar: <input type="text" id="msj" placeholder="Escribime algo">
+        <button onclick='jQuery().modal({"width": "auto",header:{"icon":"user"},"content": {"type":"text","data": document.getElementById("msj").value },"btns": [{"className": "aceptar","value":"Cerrar"},{"className": "aceptar","value":"Cerrar"}]});'>Modal</button>
+    </div>
+    <div id="image">
+        *************** MODAL IMAGENES *******************<br>
+        <button onclick='jQuery().modal({"width": "auto","header":{"icon":"none"},"content": {"type":"image", "data": "http://lorempixel.com/400/200/","type": "image"}});'>Modal Imagen</button>
+    </div>
+    <div id="iframe">
+        *************** MODAL IFRAME *YOUTUBE* *******************<br>
+        <button onclick='jQuery().modal({"width": "auto","header":{"icon":"none"},"content": {"data": "https://www.youtube.com/watch?v=SeMKKprqCFY","type":"iframe" },"shape":{"className":"iframe"}});'>Modal Video</button>
+    </div>
+</div>
+    
 </body>
 <script type="text/javascript" src="js/modal.js"></script>
 </html>
+
