@@ -20,7 +20,7 @@ See https://necolas.github.io/normalize.css/latest/normalize.css
 
 * Build a modal customizable.
 * By default create text, image modal.
-* Your personalized with params .
+* You can customize it with parameters
 * Its possible to create different styles of the same modal and then choose one
 
 
@@ -41,8 +41,9 @@ $().modal({"content": {"type":"text","data": "Hola mundo!" }});
 $().modal({"content": {"type":"image", "data": "http://lorempixel.com/400/200/"}})
 ```
 
-
 #### `Newbie mode`
+
+The parameter is json with this structure:
 
 ```javascript
 'content' : {
