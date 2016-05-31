@@ -32,18 +32,22 @@ See https://necolas.github.io/normalize.css/latest/normalize.css
 
 ## Modal on!
 
-#### `Default`
+#### `Newbie mode`
 
-The `font-family: monospace, monospace` hack fixes the inheritance and scaling
-of font-size for preformatted text. The duplication of `monospace` is
-intentional. [Source](https://en.wikipedia.org/wiki/User:Davidgothberg/Test59).
+Not recommended! My use of styles is disgusting, You are warned! 
 
-#### `sub, sup`
+> 
+$().modal({"content": {"type":"text","data": "Hola mundo!" }});
+$().modal({"content": {"type":"image", "data": "http://lorempixel.com/400/200/"}})
+
+
+
+#### `Pro mode`
 
 Normally, using `sub` or `sup` affects the line-box height of text in all
 browsers. [Source](https://gist.github.com/413930).
 
-#### `svg:not(:root)`
+#### `God mode`
 
 Adding `overflow: hidden` fixes IE9's SVG rendering. Earlier versions of IE
 don't support SVG, so we can safely use the `:not()` and `:root` selectors that
