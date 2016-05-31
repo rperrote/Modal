@@ -8,10 +8,9 @@
 		"dfts" : {
 			"shape" : "'modalShape-dft'",
 			"shapeStyle" : "'modalStyle-dft'",
-			"layout" : "'modalType-dft'",
+			"layout" : "'modalLayout-dft'",
 			"icon" : "''",
-			"mb_clase" : "'modalContent-dft'",
-			"acc" : "'Ventana modal abierta. Presiona escape para cerrar la ventana'"
+			"mb_clase" : "'modalContent-dft'"
 		}
 	},
 	"image" : {
@@ -52,7 +51,7 @@
 		"dfts" : {
 			"shape" : "'modalShape-dft'",
 			"shapeStyle" : "'modalStyle-dft'",
-			"layout" : "'modalType-dft'",
+			"layout" : "'modalLayout-dft'",
 			"icon" : "''",
 			"mb_clase" : "'modalContent-dft'",
 			"acc" : "'Ventana modal abierta. Presiona escape para cerrar la ventana'"

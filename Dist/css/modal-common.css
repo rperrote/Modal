@@ -8,9 +8,9 @@
 .modalStyle-demo {background: none repeat scroll 0 0 #FFFFFF; border-color: #cf3734;}
 
 /* Maqueta 1 */
-.modalType-1 div{}
-.modalType-1 #modal-body {margin: 10px 0; }
-.modalType-1 #modal-footer {width: 100%; }
+.modalLayout-1 div{}
+.modalLayout-1 #modal-body {margin: 10px 0; }
+.modalLayout-1 #modal-footer {width: 100%; }
 
 
 /* Header - Cabecera */

@@ -25,15 +25,15 @@
     <div id="text">
         *************** MODAL TEXTO *******************<br>
         Mensaje a mostrar: <input type="text" id="msj" placeholder="Escribime algo">
-        <button onclick='jQuery().modal({"width": "auto",header:{"icon":"user"},"content": {"type":"text","data": document.getElementById("msj").value },"btns": [{"className": "aceptar","value":"Cerrar"},{"className": "aceptar","value":"Cerrar"}]});'>Modal</button>
+        <button onclick='$().modal({"content": {"type":"text","data": document.getElementById("msj").value }});'>Modal</button>
     </div>
     <div id="image">
         *************** MODAL IMAGENES *******************<br>
-        <button onclick='jQuery().modal({"width": "auto","header":{"icon":"none"},"content": {"type":"image", "data": "http://lorempixel.com/400/200/","type": "image"}});'>Modal Imagen</button>
+        <button onclick='$().modal({"content": {"type":"image", "data": "http://lorempixel.com/400/200/"}});'>Modal Imagen</button>
     </div>
     <div id="iframe">
         *************** MODAL IFRAME *YOUTUBE* *******************<br>
-        <button onclick='jQuery().modal({"width": "auto","header":{"icon":"none"},"content": {"data": "https://www.youtube.com/embed/SeMKKprqCFY","type":"iframe" },"shape":{"className":"iframe"}});'>Modal Video</button>
+        <button onclick='$().modal({"content": {"data": "https://www.youtube.com/embed/SeMKKprqCFY","type":"iframe" },"shape":{"className":"iframe"}});'>Modal Video</button>
     </div>
 </div>
     

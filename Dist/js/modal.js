@@ -132,7 +132,7 @@ function Modal(args){
 			modal.setClassName(modal.md, (args.shape != null && args.shape.style != null && (!args.shape.style.length == 0)) ? "modalStyle-"+args.shape.style : modal.shapeStyle);
 
 			/* Layout */
-			modal.setClassName(modal.md, (args.type != null && (!args.type.length == 0)) ? "modalType-"+args.type : modal.layout);
+			modal.setClassName(modal.md, (args.layout != null && (!args.layout.length == 0)) ? "modalLayout-"+args.layout : modal.layout);
 
 			/* Header - Cabecera */
 			modal.setClassName(modal.mh, (args.header != null && args.header.icon != null && (!args.header.icon.length == 0)) ? args.header.icon : modal.icon);
@@ -159,7 +159,7 @@ function Modal(args){
 					/* Se lo identifica por orden de creacion */
 					btn.id = "mBtn-"+i;
 					/* Texto del boton */
-					btn.innerHTML = (obj.value) ? obj.value : obj.className.toUpperCase()
+					btn.innerHTML = (obj.value) ? obj.value : obj.shape.toUpperCase()
 					/* Clase que define al boton */
 					modal.setClassName(btn, "btn");
 					modal.setClassName(btn, (obj.shape != null && (!obj.shape.length == 0)) ? "btn-"+obj.shape : "btn-default");
@@ -235,7 +235,7 @@ function Modal(args){
 			modal.mb.appendChild(elem);
 			modal.display("block");
 			jQuery("#modal-content").focus();
-			jQuery("#modal-box").width((args.width == "auto") ? jQuery("#modal-content").width() : args.width);
+			jQuery("#modal-box").width((!args.width || args.width == "auto" || args.width == "") ? jQuery("#modal-content").width() : args.width);
 			jQuery("#modal-inner").width(jQuery("#modal-box").outerWidth());
 		}).fail(function( jqxhr, textStatus, error ) {
 		    var err = textStatus + ", " + error;
