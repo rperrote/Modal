@@ -56,7 +56,7 @@ The parameter is json with this structure:
     'className' : String,        //<-- Name of class on css who define style of the shape literally*
     'style' : String             //<-- Name of class on css who define style of the canvas of content*
 }
-'layout' : String,                 //<-- Define type of modal. 
+'layout' : String,               //<-- Define layout of modal. 
 'header' : {					 //<-- Header!
     'icon' : String,             //<-- 
     'title' : {                  //<--
