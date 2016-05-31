@@ -19,7 +19,7 @@ See https://necolas.github.io/normalize.css/latest/normalize.css
 ## What does it do?
 
 * Build a modal customizable.
-* By default create text , image and video modal Youtube .
+* By default create text, image modal.
 * Your personalized with params .
 * Its possible to create different styles of the same modal and then choose one
 
