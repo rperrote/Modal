@@ -36,10 +36,10 @@ See https://necolas.github.io/normalize.css/latest/normalize.css
 
 Not recommended! My use of styles is disgusting, You are warned! 
 
-> 
+```javascript
 $().modal({"content": {"type":"text","data": "Hola mundo!" }});
 $().modal({"content": {"type":"image", "data": "http://lorempixel.com/400/200/"}})
-
+```
 
 
 #### `Pro mode`
