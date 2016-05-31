@@ -93,7 +93,7 @@ You can modify plugins.json and create diferents templates of modal. Plugins.jso
 ```javascript
 "text" : {                                   //<-- Name for plugin.
     "element" : "p",						 //<-- Parent element of content.
-	"objAttrs": {							 //<-- Set attr to element. elm.****attr**** = sarasa  
+	"objAttrs": {							 //<-- Set attr to element. elm.**attr** = sarasa  
 	    "innerHTML" : "data",
 		"id" : "'modal-content'"
 	},
