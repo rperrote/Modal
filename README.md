@@ -48,7 +48,7 @@ The parameter is json with this structure:
 
 ```javascript
 'content' : {                    //<-- Content!
-    'type' : String,             //<-- Type of data entry. This Define type of content modal.
+    'type' : String,             //<-- Type of data entry. Default: text. It must exist on plugin.json
     'data' : Object,             //<-- Any data to show. Here.
     'className' : String,        //<-- Name of class on css who define style of content.
 },
@@ -56,9 +56,9 @@ The parameter is json with this structure:
     'className' : String,        //<-- Name of class on css who define style of the shape literally*
     'style' : String             //<-- Name of class on css who define style of the canvas of content*
 }
-'type' : String,                 //<--
-'header' : {					 //<--
-    'icon' : String,             //<--
+'layout' : String,                 //<-- Define type of modal. 
+'header' : {					 //<-- Header!
+    'icon' : String,             //<-- 
     'title' : {                  //<--
         'className' : String,    //<--
         'content' : String       //<--
