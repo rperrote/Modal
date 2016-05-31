@@ -46,7 +46,7 @@ $().modal({"content": {"type":"image", "data": "http://lorempixel.com/400/200/"}
 The parameter is json with this structure:
 
 ```javascript
-'content' : {                    <-- Content!
+'content' : {                    //<-- Content!
     'type' : String,             <-- Type of data entry. This Define type of content modal.
     'data' : Object,             <-- Any data to show. Here.
     'className' : String,        <--
