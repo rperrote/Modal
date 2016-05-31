@@ -44,11 +44,46 @@ $().modal({"content": {"type":"image", "data": "http://lorempixel.com/400/200/"}
 
 #### `Newbie mode`
 
-|   |   |   |   |   |
-|---|---|---|---|---|
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
+```javascript
+'content' : {
+		'type' : String,
+		'data' : Object,
+		'className' : String,
+	},
+	'shape' : {
+		'className' : String,
+		'style' : String
+	}
+	'type' : String,
+	'header' : {
+		'icon' : String,
+		'title' : {
+			'className' : String,
+			'content' : String
+		}
+	},
+	'close' : {
+		'button' : Boolean,
+		'escape' : Boolean
+	},
+	'acc' : {
+		'text' : String
+	},
+	'btns' : [{
+		'value' : String,
+		'className' : String,
+		'shape' : String,
+		'type' : String,
+		'action' : String,
+		'close' : Boolean,
+		'key' : String
+	}],
+	'overlay' : {
+		'className' : String,
+		'click' : Boolean
+	},
+	'width' : String
+    ```
 
 #### `Pro mode`
 
