@@ -88,14 +88,14 @@ The parameter is json with this structure:
 
 #### Pro mode
 
-You can modify plugins.json and create diferents templates of modal. Plugins.json have this structure:
+You can modify defaults plugins.json and create diferents templates of modal. Plugins.json have this structure:
 
 ```javascript
 "text" : {                                   //<-- Name for plugin.
-    "element" : "p",						 //<-- Parent element of content.
+    "element" : "",						     //<-- Parent element of content.
 	"objAttrs": {							 //<-- Set attr to element. elm.attr = value  
-	    "innerHTML" : "data",
-		"id" : "'modal-content'"
+	    "innerHTML" : "",
+		"id" : ""
 	},
     'attrs' : {                              //<-- Set attr to element. elm.setAttribute(attr, value)
     },
@@ -108,6 +108,9 @@ You can modify plugins.json and create diferents templates of modal. Plugins.jso
 	}
 }
 ```
+
+Use text plugin for guide you.
+
 
 #### God mode
 
