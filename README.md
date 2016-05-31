@@ -54,7 +54,7 @@ The parameter is json with this structure:
 },
 'shape' : {                      //<-- Shape!
     'className' : String,        //<-- Name of class on css who define style of the shape literally*
-    'style' : String             //<-- Name of class on css who define style of the canvas of content
+    'style' : String             //<-- Name of class on css who define style of the canvas of content*
 }
 'type' : String,                 //<--
 'header' : {					 //<--
