@@ -93,18 +93,18 @@ You can modify plugins.json and create diferents templates of modal. Plugins.jso
 ```javascript
 "text" : {                                   //<-- Name for plugin.
     "element" : "p",						 //<-- Parent element of content.
-	"objAttrs": {							 //<-- Set attr to element. elm.**attr** = sarasa  
+	"objAttrs": {							 //<-- Set attr to element. elm.attr = value  
 	    "innerHTML" : "data",
 		"id" : "'modal-content'"
 	},
-    'attrs' : {                              //<-- Set attr to element. elm.setAttribute(**attr**, value)
+    'attrs' : {                              //<-- Set attr to element. elm.setAttribute(attr, value)
     },
-	"dfts" : {							     
-		"shape" : "'modalShape-dft'",
-		"shapeStyle" : "'modalStyle-dft'",
-		"layout" : "'modalLayout-dft'",
-		"icon" : "''",
-		"mb_clase" : "'modalContent-dft'"
+	"dfts" : {							     //<-- Overwrite defaults
+		"shape" : "",
+		"shapeStyle" : "",
+		"layout" : "",
+		"icon" : "",
+		"mb_clase" : ""
 	}
 }
 ```
