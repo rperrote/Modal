@@ -56,35 +56,34 @@ The parameter is json with this structure:
     'className' : String,        //<-- Name of class on css who define style of the shape literally*
     'style' : String             //<-- Name of class on css who define style of the canvas of content*
 }
-'layout' : String,               //<-- Define layout of modal. 
+'layout' : String,               //<-- Define layout of modal*
 'header' : {					 //<-- Header!
-    'icon' : String,             //<-- 
-    'title' : {                  //<--
-        'className' : String,    //<--
-        'content' : String       //<--
+    'icon' : String,             //<-- If you wanna set a icon or a something on header but not content.
+    'title' : {                  //<-- Title!
+        'className' : String,    //<-- Name of class on css who define style of title header.
+        'content' : String       //<-- Text of title
 	}
 },
-'close' : {                      //<--
-    'button' : Boolean,          //<--
-    'escape' : Boolean           //<--
+'close' : {                      //<-- Close modal!
+    'button' : Boolean,          //<-- True or empty or null create a close button. False dont.
+    'escape' : Boolean           //<-- True or empty or null set key 'Esc' to close modal.
 },
-'acc' : {                        //<--
-    'text' : String              //<--
+'acc' : {                        //<-- Accessibility time!
+    'text' : String              //<-- Text to read for accessibility readers.
 },
-'btns' : [{                      //<--
-    'value' : String,            //<--
-    'className' : String,        //<--
-    'shape' : String,            //<--
-    'type' : String,             //<--
-    'action' : String,           //<--
-    'close' : Boolean,           //<--
-    'key' : String               //<--
+'btns' : [{                      //<-- Buttons everywhere! Is an array of buttons.
+    'value' : String,            //<-- Text display on button.
+    'shape' : String,            //<-- Name of class on css who define a style of button.
+    'type' : String,             //<-- Define event of button. Function, link or close modal.
+    'action' : String,           //<-- Define funcion or link of type button.
+    'close' : Boolean,           //<-- True or empty or null button close modal. False dont.
+    'key' : CharCode             //<-- Charcode of key trigger of btn.
 }],
-'overlay' : {                    //<--
-    'className' : String,        //<--
-    'click' : Boolean            //<--
+'overlay' : {                    //<-- Overlay!
+    'className' : String,        //<-- Overwrite style of overlay.
+    'click' : Boolean            //<-- True, empty or null close modal on click overlay. False dont.
 },
-'width' : String                 //<--
+'width' : String                 //<-- Set with of modal. Auto for default.
 ```
 
 #### Pro mode
