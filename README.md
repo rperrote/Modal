@@ -91,13 +91,15 @@ The parameter is json with this structure:
 You can modify plugins.json and create diferents templates of modal. Plugins.json have this structure:
 
 ```javascript
-"text" : {                                   //<-- Content!
-    "element" : "p",
-	"objAttrs": {
+"text" : {                                   //<-- Name for plugin.
+    "element" : "p",						 //<-- Parent element of content.
+	"objAttrs": {							 //<-- Set attr to element. elm.****attr**** = sarasa  
 	    "innerHTML" : "data",
 		"id" : "'modal-content'"
-	},		
-	"dfts" : {
+	},
+    'attrs' : {                              //<-- Set attr to element. elm.setAttribute(**attr**, value)
+    },
+	"dfts" : {							     
 		"shape" : "'modalShape-dft'",
 		"shapeStyle" : "'modalStyle-dft'",
 		"layout" : "'modalLayout-dft'",
