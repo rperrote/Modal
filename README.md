@@ -46,44 +46,44 @@ $().modal({"content": {"type":"image", "data": "http://lorempixel.com/400/200/"}
 The parameter is json with this structure:
 
 ```javascript
-'content' : {
-    'type' : String,   asdasds
-    'data' : Object,
-    'className' : String,
+'content' : {                    <
+    'type' : String,             <
+    'data' : Object,             <
+    'className' : String,        <
 },
-'shape' : {
-    'className' : String,
-    'style' : String
+'shape' : {                      <
+    'className' : String,        <
+    'style' : String             <
 }
-'type' : String,
-'header' : {
-    'icon' : String,
-    'title' : {
-        'className' : String,
-        'content' : String
+'type' : String,                 <
+'header' : {					 <
+    'icon' : String,             <
+    'title' : {                  <
+        'className' : String,    <
+        'content' : String       <
 	}
 },
-'close' : {
-    'button' : Boolean,
-    'escape' : Boolean
+'close' : {                      <
+    'button' : Boolean,          <
+    'escape' : Boolean           <
 },
-'acc' : {
-    'text' : String
+'acc' : {                        <
+    'text' : String              <
 },
-'btns' : [{
-    'value' : String,
-    'className' : String,
-    'shape' : String,
-    'type' : String,
-    'action' : String,
-    'close' : Boolean,
-    'key' : String
+'btns' : [{                      <
+    'value' : String,            <
+    'className' : String,        <
+    'shape' : String,            <
+    'type' : String,             <
+    'action' : String,           <
+    'close' : Boolean,           <
+    'key' : String               <
 }],
-'overlay' : {
-    'className' : String,
-    'click' : Boolean
+'overlay' : {                    <
+    'className' : String,        <
+    'click' : Boolean            <
 },
-'width' : String
+'width' : String                 <
 ```
 
 #### Pro mode
