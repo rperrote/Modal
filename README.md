@@ -32,7 +32,7 @@ See https://necolas.github.io/normalize.css/latest/normalize.css
 
 ## Modal on!
 
-#### `Newbie mode`
+#### `Default mode`
 
 Not recommended! My use of styles is disgusting, You are warned! 
 
@@ -42,19 +42,22 @@ $().modal({"content": {"type":"image", "data": "http://lorempixel.com/400/200/"}
 ```
 
 
+#### `Newbie mode`
+
+|   |   |   |   |   |
+|---|---|---|---|---|
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+
 #### `Pro mode`
-
-Normally, using `sub` or `sup` affects the line-box height of text in all
-browsers. [Source](https://gist.github.com/413930).
-
-#### `God mode`
 
 Adding `overflow: hidden` fixes IE9's SVG rendering. Earlier versions of IE
 don't support SVG, so we can safely use the `:not()` and `:root` selectors that
 modern browsers use in the default UA stylesheets to apply this style. [Source]
 (https://lists.w3.org/Archives/Public/public-svg-wg/2008JulSep/0339.html).
 
-#### `select`
+#### `God mode`
 
 By default, Chrome on OS X and Safari on OS X allow very limited styling of
 `select`, unless a border property is set. The default font weight on `optgroup`
