@@ -88,10 +88,24 @@ The parameter is json with this structure:
 
 #### Pro mode
 
-Adding `overflow: hidden` fixes IE9's SVG rendering. Earlier versions of IE
-don't support SVG, so we can safely use the `:not()` and `:root` selectors that
-modern browsers use in the default UA stylesheets to apply this style. [Source]
-(https://lists.w3.org/Archives/Public/public-svg-wg/2008JulSep/0339.html).
+You can modify plugins.json and create diferents templates of modal. Plugins.json have this structure:
+
+```javascript
+"text" : {                                   //<-- Content!
+    "element" : "p",
+	"objAttrs": {
+	    "innerHTML" : "data",
+		"id" : "'modal-content'"
+	},		
+	"dfts" : {
+		"shape" : "'modalShape-dft'",
+		"shapeStyle" : "'modalStyle-dft'",
+		"layout" : "'modalLayout-dft'",
+		"icon" : "''",
+		"mb_clase" : "'modalContent-dft'"
+	}
+}
+```
 
 #### God mode
 
