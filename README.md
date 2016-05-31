@@ -30,6 +30,7 @@ See https://necolas.github.io/normalize.css/latest/normalize.css
 * Firefox (last two)
 
 
+
 ## Modal on!
 
 #### Default mode
@@ -49,11 +50,11 @@ The parameter is json with this structure:
 'content' : {                    //<-- Content!
     'type' : String,             //<-- Type of data entry. This Define type of content modal.
     'data' : Object,             //<-- Any data to show. Here.
-    'className' : String,        //<--
+    'className' : String,        //<-- Name of class on css who define style of content.
 },
-'shape' : {                      //<--
-    'className' : String,        //<--
-    'style' : String             //<--
+'shape' : {                      //<-- Shape!
+    'className' : String,        //<-- Name of class on css who define style of the shape literally*
+    'style' : String             //<-- Name of class on css who define style of the canvas of content
 }
 'type' : String,                 //<--
 'header' : {					 //<--
