@@ -47,43 +47,43 @@ The parameter is json with this structure:
 
 ```javascript
 'content' : {                    //<-- Content!
-    'type' : String,             <-- Type of data entry. This Define type of content modal.
-    'data' : Object,             <-- Any data to show. Here.
-    'className' : String,        <--
+    'type' : String,             //<-- Type of data entry. This Define type of content modal.
+    'data' : Object,             //<-- Any data to show. Here.
+    'className' : String,        //<--
 },
-'shape' : {                      <--
-    'className' : String,        <--
-    'style' : String             <--
+'shape' : {                      //<--
+    'className' : String,        //<--
+    'style' : String             //<--
 }
-'type' : String,                 <--
-'header' : {					 <--
-    'icon' : String,             <--
-    'title' : {                  <--
-        'className' : String,    <--
-        'content' : String       <--
+'type' : String,                 //<--
+'header' : {					 //<--
+    'icon' : String,             //<--
+    'title' : {                  //<--
+        'className' : String,    //<--
+        'content' : String       //<--
 	}
 },
-'close' : {                      <--
-    'button' : Boolean,          <--
-    'escape' : Boolean           <--
+'close' : {                      //<--
+    'button' : Boolean,          //<--
+    'escape' : Boolean           //<--
 },
-'acc' : {                        <--
-    'text' : String              <--
+'acc' : {                        //<--
+    'text' : String              //<--
 },
-'btns' : [{                      <--
-    'value' : String,            <--
-    'className' : String,        <--
-    'shape' : String,            <--
-    'type' : String,             <--
-    'action' : String,           <--
-    'close' : Boolean,           <--
-    'key' : String               <--
+'btns' : [{                      //<--
+    'value' : String,            //<--
+    'className' : String,        //<--
+    'shape' : String,            //<--
+    'type' : String,             //<--
+    'action' : String,           //<--
+    'close' : Boolean,           //<--
+    'key' : String               //<--
 }],
-'overlay' : {                    <--
-    'className' : String,        <--
-    'click' : Boolean            <--
+'overlay' : {                    //<--
+    'className' : String,        //<--
+    'click' : Boolean            //<--
 },
-'width' : String                 <--
+'width' : String                 //<--
 ```
 
 #### Pro mode
