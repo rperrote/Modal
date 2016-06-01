@@ -3,7 +3,7 @@
 > A modern and simple modal
 
 [![npm][npm-image]][npm-url] [![license][license-image]][license-url]
-
+[![npm](https://img.shields.io/npm/v/npm.svg?maxAge=2592000)](https://www.npmjs.com/package/normalize.css)
 
 **NPM**
 
