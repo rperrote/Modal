@@ -15,12 +15,12 @@ function Modal(args){
 	this.args = args;
 
 	//Default values
-	this.shape = "modalShape-dft";
-	this.shapeStyle = "modalStyle-dft";
-	this.layout = "modalType-dft";
+	this.shape = "";
+	this.shapeStyle = "";
+	this.layout = "";
 	this.icon = "";
-	this.mb_clase = "modalContent-dft";
-	this.acc = "Ventana modal abierta. Presiona escape para cerrar la ventana";
+	this.mb_clase = "";
+	this.acc = "";
 
 	this.changevisible = function(display) {
 		if("none" == display){
@@ -93,18 +93,16 @@ function Modal(args){
 			this.keys["27"] = "";
 		}
 
-		/* Accesibilidad */
-		this.desc.innerHTML = (args.acc != null && args.acc.text != null && (!args.acc.text.length == 0)) ? args.acc.text : this.acc;
-		this.setClassName(this.desc,"only-reader");
-		var plugins;
-		$.getJSON('js/plugins.json').done(function (data) {
-			plugins = data;
-
+		$.getJSON('modal.json').done(function (data) {
 			var args = modal.args;
 			/* Tipo de dato */
 			var type = (args.content != null && args.content.type != null && (!args.content.type.length == 0)) ? args.content.type : "text";
 
-			var plugin = plugins[type];
+			var plugin = data[type];
+
+			/* Accesibilidad */
+			modal.desc.innerHTML = (args.acc != null && args.acc.text != null && (!args.acc.text.length == 0)) ? args.acc.text : modal.acc;
+			modal.setClassName(modal.desc,"only-reader");
 
 			if(plugin == null){
 				console.log("El plugin que usted eligio no existe");
