@@ -134,8 +134,6 @@ co-created with [Jonathan Neal](https://github.com/jonathantneal).
 [gitter-image]: https://img.shields.io/badge/chat-gitter-blue.svg?style=flat-square
 [gitter-url]: https://gitter.im/necolas/normalize.css
 
-[![npm](https://img.shields.io/npm/v/npm.svg?maxAge=2592000)](https://www.npmjs.com/package/normalize.css)
-[![npm (scoped)](https://img.shields.io/npm/v/@cycle/core.svg?maxAge=2592000)](https://img.shields.io/npm/v/normalize.css.svg?style=flat-square)
 
 
 
