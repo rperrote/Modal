@@ -1,4 +1,4 @@
-# Changes to normalize.css
+# Changes to modal.js
 
 ### 1.1.0 (June 02, 2016)
 
