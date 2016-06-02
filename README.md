@@ -133,7 +133,7 @@ I create a youtube video modal:
 	}
 }
 ```
-**NOTE: Important! objAttrs and attrs is under eval. You can use variables of args (parameter of modal) and set new parameters. Example: width, height and id. If you pass string need double quotes "''".**
+**NOTE: Important! objAttrs and attrs is under eval. You can use variables of args (parameter of modal) and set new parameters. Example: width, height and id. If you pass string need double quotes " ' ' ".**
 
 
 #### Json url
