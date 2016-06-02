@@ -83,7 +83,7 @@ The parameter is json with this structure:
 
 #### Pro mode
 
-You can modify defaults modal.json and create diferents templates of modal. Plugins.json have this structure:
+You can modify defaults modal.json and create different templates of modal. Plugins.json have this structure:
 
 ```javascript
 "text" : {                                   //<-- Name for plugin.
