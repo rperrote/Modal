@@ -25,7 +25,6 @@ npm install --save modal.js
 * Firefox (last two)
 
 
-
 ## Modal on!
 
 #### Default mode
