@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Modal by rperrote</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Modal</h1>
+      <h2 class="project-tagline">A simple modern modal</h2>
+      <a href="https://github.com/rperrote/Modal" class="btn">View on GitHub</a>
+      <a href="https://github.com/rperrote/Modal/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/rperrote/Modal/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="modaljs" class="anchor" href="#modaljs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Modal.js</h1>
+
+<blockquote>
+<p>A modern and simple modal</p>
+</blockquote>
+
+<p><a href="https://www.npmjs.com/package/modal.js"><img src="https://img.shields.io/badge/npm-1.1.0-blue.svg?style=flat" alt="npm"></a> <a href="LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="license"></a> <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/changelog-md-blue.svg?style=flat" alt="changelog"></a></p>
+
+<p><strong>NPM</strong></p>
+
+<div class="highlight highlight-source-shell"><pre>npm install --save modal.js</pre></div>
+
+<h2>
+<a id="what-does-it-do" class="anchor" href="#what-does-it-do" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What does it do?</h2>
+
+<ul>
+<li>Build a modal customizable.</li>
+<li>By default create text, image modal.</li>
+<li>You can customize it with parameters</li>
+<li>Its possible to create different styles of the same modal and then choose one</li>
+</ul>
+
+<h2>
+<a id="browser-support-only-tested-on" class="anchor" href="#browser-support-only-tested-on" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Browser support (Only tested on)</h2>
+
+<ul>
+<li>Chrome (last two)</li>
+<li>Firefox (last two)</li>
+</ul>
+
+<h2>
+<a id="modal-on" class="anchor" href="#modal-on" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Modal on!</h2>
+
+<h4>
+<a id="default-mode" class="anchor" href="#default-mode" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Default mode</h4>
+
+<p>Not recommended! My use of styles is disgusting, You are warned! </p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">$</span>().<span class="pl-en">modal</span>({<span class="pl-s"><span class="pl-pds">"</span>content<span class="pl-pds">"</span></span><span class="pl-k">:</span> {<span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Hola mundo!<span class="pl-pds">"</span></span> }});
+<span class="pl-en">$</span>().<span class="pl-en">modal</span>({<span class="pl-s"><span class="pl-pds">"</span>content<span class="pl-pds">"</span></span><span class="pl-k">:</span> {<span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>image<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>http://lorempixel.com/400/200/<span class="pl-pds">"</span></span>}})</pre></div>
+
+<h4>
+<a id="newbie-mode" class="anchor" href="#newbie-mode" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Newbie mode</h4>
+
+<p>The parameter is json with this structure:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-s"><span class="pl-pds">'</span>content<span class="pl-pds">'</span></span> <span class="pl-k">:</span> {                    <span class="pl-c">//&lt;-- Content!</span>
+    <span class="pl-s"><span class="pl-pds">'</span>type<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">String</span>,             <span class="pl-c">//&lt;-- Type of data entry. Default: text. It must exist on plugin.json</span>
+    <span class="pl-s"><span class="pl-pds">'</span>data<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">Object</span>,             <span class="pl-c">//&lt;-- Any data to show. Here.</span>
+    <span class="pl-s"><span class="pl-pds">'</span>className<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">String</span>,        <span class="pl-c">//&lt;-- Name of class on css who define style of content.</span>
+},
+<span class="pl-s"><span class="pl-pds">'</span>shape<span class="pl-pds">'</span></span> <span class="pl-k">:</span> {                      <span class="pl-c">//&lt;-- Shape!</span>
+    <span class="pl-s"><span class="pl-pds">'</span>className<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">String</span>,        <span class="pl-c">//&lt;-- Name of class on css who define style of the shape literally*</span>
+    <span class="pl-s"><span class="pl-pds">'</span>style<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">String</span>             <span class="pl-c">//&lt;-- Name of class on css who define style of the canvas of content*</span>
+}
+<span class="pl-s"><span class="pl-pds">'</span>layout<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">String</span>,               <span class="pl-c">//&lt;-- Define layout of modal*</span>
+<span class="pl-s"><span class="pl-pds">'</span>header<span class="pl-pds">'</span></span> <span class="pl-k">:</span> {                     <span class="pl-c">//&lt;-- Header!</span>
+    <span class="pl-s"><span class="pl-pds">'</span>icon<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">String</span>,             <span class="pl-c">//&lt;-- If you wanna set a icon or a something on header but not content.</span>
+    <span class="pl-s"><span class="pl-pds">'</span>title<span class="pl-pds">'</span></span> <span class="pl-k">:</span> {                  <span class="pl-c">//&lt;-- Title!</span>
+        <span class="pl-s"><span class="pl-pds">'</span>className<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">String</span>,    <span class="pl-c">//&lt;-- Name of class on css who define style of title header.</span>
+        <span class="pl-s"><span class="pl-pds">'</span>content<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">String</span>       <span class="pl-c">//&lt;-- Text of title</span>
+    }
+},
+<span class="pl-s"><span class="pl-pds">'</span>close<span class="pl-pds">'</span></span> <span class="pl-k">:</span> {                      <span class="pl-c">//&lt;-- Close modal!</span>
+    <span class="pl-s"><span class="pl-pds">'</span>button<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">Boolean</span>,          <span class="pl-c">//&lt;-- True or empty or null create a close button. False dont.</span>
+    <span class="pl-s"><span class="pl-pds">'</span>escape<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">Boolean</span>           <span class="pl-c">//&lt;-- True or empty or null set key 'Esc' to close modal.</span>
+},
+<span class="pl-s"><span class="pl-pds">'</span>acc<span class="pl-pds">'</span></span> <span class="pl-k">:</span> {                        <span class="pl-c">//&lt;-- Accessibility time!</span>
+    <span class="pl-s"><span class="pl-pds">'</span>text<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">String</span>              <span class="pl-c">//&lt;-- Text to read for accessibility readers.</span>
+},
+<span class="pl-s"><span class="pl-pds">'</span>btns<span class="pl-pds">'</span></span> <span class="pl-k">:</span> [{                      <span class="pl-c">//&lt;-- Buttons everywhere! Is an array of buttons.</span>
+    <span class="pl-s"><span class="pl-pds">'</span>value<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">String</span>,            <span class="pl-c">//&lt;-- Text display on button.</span>
+    <span class="pl-s"><span class="pl-pds">'</span>shape<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">String</span>,            <span class="pl-c">//&lt;-- Name of class on css who define a style of button.</span>
+    <span class="pl-s"><span class="pl-pds">'</span>type<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">String</span>,             <span class="pl-c">//&lt;-- Define event of button. Function, link or close modal.</span>
+    <span class="pl-s"><span class="pl-pds">'</span>action<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">String</span>,           <span class="pl-c">//&lt;-- Define funcion or link of type button.</span>
+    <span class="pl-s"><span class="pl-pds">'</span>close<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">Boolean</span>,           <span class="pl-c">//&lt;-- True or empty or null button close modal. False dont.</span>
+    <span class="pl-s"><span class="pl-pds">'</span>key<span class="pl-pds">'</span></span> <span class="pl-k">:</span> CharCode             <span class="pl-c">//&lt;-- Charcode of key trigger of btn.</span>
+}],
+<span class="pl-s"><span class="pl-pds">'</span>overlay<span class="pl-pds">'</span></span> <span class="pl-k">:</span> {                    <span class="pl-c">//&lt;-- Overlay!</span>
+    <span class="pl-s"><span class="pl-pds">'</span>className<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">String</span>,        <span class="pl-c">//&lt;-- Overwrite style of overlay.</span>
+    <span class="pl-s"><span class="pl-pds">'</span>click<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">Boolean</span>            <span class="pl-c">//&lt;-- True, empty or null close modal on click overlay. False dont.</span>
+},
+<span class="pl-s"><span class="pl-pds">'</span>width<span class="pl-pds">'</span></span> <span class="pl-k">:</span> <span class="pl-c1">String</span>                 <span class="pl-c">//&lt;-- Set with of modal. Auto for default.</span></pre></div>
+
+<h4>
+<a id="pro-mode" class="anchor" href="#pro-mode" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pro mode</h4>
+
+<p>You can modify defaults modal.json and create different templates of modal. Plugins.json have this structure:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-k">:</span> {                                   <span class="pl-c">//&lt;-- Name for plugin.</span>
+    <span class="pl-s"><span class="pl-pds">"</span>element<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,                          <span class="pl-c">//&lt;-- Parent element of content.</span>
+    <span class="pl-s"><span class="pl-pds">"</span>objAttrs<span class="pl-pds">"</span></span><span class="pl-k">:</span> {                            <span class="pl-c">//&lt;-- Set attr to element. elm.attr = value  </span>
+        <span class="pl-s"><span class="pl-pds">"</span>innerHTML<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>
+    },
+    <span class="pl-s"><span class="pl-pds">'</span>attrs<span class="pl-pds">'</span></span> <span class="pl-k">:</span> {                              <span class="pl-c">//&lt;-- Set attr to element. elm.setAttribute(attr, value)</span>
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>dfts<span class="pl-pds">"</span></span> <span class="pl-k">:</span> {                               <span class="pl-c">//&lt;-- Overwrite defaults</span>
+        <span class="pl-s"><span class="pl-pds">"</span>shape<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>shapeStyle<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>layout<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>icon<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>mb_clase<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>
+    }
+}</pre></div>
+
+<p>Use text plugin for guide you.</p>
+
+<h4>
+<a id="god-mode" class="anchor" href="#god-mode" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>God mode</h4>
+
+<p>Not only can create a different templates of same modal, different modal too!
+You have access a args (parameter of modal), and you add custom variables on parameters.</p>
+
+<p>I create a youtube video modal:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-s"><span class="pl-pds">"</span>iframe<span class="pl-pds">"</span></span> <span class="pl-k">:</span> {
+    <span class="pl-s"><span class="pl-pds">"</span>element<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>iframe<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>objAttrs<span class="pl-pds">"</span></span> <span class="pl-k">:</span>{
+        <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>'mFrame-content'<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>width<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>args.content.width<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>height<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>args.content.height<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>src<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span>
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>attrs<span class="pl-pds">"</span></span> <span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>'frameborder'<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>'0'<span class="pl-pds">"</span></span>,
+      <span class="pl-s"><span class="pl-pds">"</span>'allowfullscreen'<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>''<span class="pl-pds">"</span></span>,
+      <span class="pl-s"><span class="pl-pds">"</span>'mozallowfullscreen'<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>''<span class="pl-pds">"</span></span>,
+      <span class="pl-s"><span class="pl-pds">"</span>'webkitallowfullscreen'<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>''<span class="pl-pds">"</span></span>,
+      <span class="pl-s"><span class="pl-pds">"</span>'hspace'<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>'0'<span class="pl-pds">"</span></span>,
+      <span class="pl-s"><span class="pl-pds">"</span>'vspace'<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>'0'<span class="pl-pds">"</span></span>,
+      <span class="pl-s"><span class="pl-pds">"</span>'scrolling'<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>'auto'<span class="pl-pds">"</span></span>
+    }
+}</pre></div>
+
+<h2>
+<a id="acknowledgements" class="anchor" href="#acknowledgements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Acknowledgements</h2>
+
+<p>Modal.js is a project by <a href="https://github.com/rperrote">Rodrigo Perrote</a>.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/rperrote/Modal">Modal</a> is maintained by <a href="https://github.com/rperrote">rperrote</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
