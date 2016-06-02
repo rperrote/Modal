@@ -2,7 +2,7 @@
 
 > A modern and simple modal
 
-[![npm][npm-image]][npm-url] [![license][license-image]][license-url][![changelog][changelog-image]][changelog-url]
+[![npm][npm-image]][npm-url] [![license][license-image]][license-url] [![changelog][changelog-image]][changelog-url]
 
 
 **NPM**
