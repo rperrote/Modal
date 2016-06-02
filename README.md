@@ -110,7 +110,7 @@ Use text plugin for guide you.
 #### God mode
 
 Not only can create a diferents templates of same modal, diferents modal too!
-You have access a args. Parameter of modal, and you add custom variables on parameters.
+You have access a args (parameter of modal), and you add custom variables on parameters.
 
 I create a youtube video modal:
 
@@ -146,5 +146,3 @@ Modal.js is a project by [Rodrigo Perrote](https://github.com/rperrote).
 [license-url]: LICENSE.md
 [npm-image]: https://img.shields.io/badge/npm-1.0-blue.svg?style=flat
 [npm-url]: https://www.npmjs.com/package/modal.js
-
-
