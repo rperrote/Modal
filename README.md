@@ -109,7 +109,7 @@ Use text plugin for guide you.
 
 #### God mode
 
-Not only can create a diferents templates of same modal, diferents modal too!
+Not only can create a different templates of same modal, different modal too!
 You have access a args (parameter of modal), and you add custom variables on parameters.
 
 I create a youtube video modal:
