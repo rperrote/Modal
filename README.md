@@ -135,6 +135,17 @@ I create a youtube video modal:
 }
 ```
 
+#### Json url
+
+Url of "plugins" or types of modals need this structure:
+* index.html -> calls modal js
+* js/modal.json
+* js/modal.js
+
+but before call modal js you can overwrite url:
+urlModal = "js/modal.json"; -> Default
+
+
 ## Acknowledgements
 
 Modal.js is a project by [Rodrigo Perrote](https://github.com/rperrote).
