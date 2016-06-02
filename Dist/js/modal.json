@@ -1,34 +1,17 @@
 {
 	"dfts" : {
-		"shapeClassname" = "modalShape-dft",
-		"shapeStyle" = "modalStyle-dft",
-		"layout" = "modalType-dft",
-		"icon" = "",
-		"contentClassname" = "modalContent-dft",
-		"acc" = "Ventana modal abierta. Presiona escape para cerrar la ventana"
+		"shapeClassname":"modalShape-dft",
+		"shapeStyle":"modalStyle-dft",
+		"layout":"modalType-dft",
+		"icon":"",
+		"contentClassname":"modalContent-dft",
+		"acc":"Ventana modal abierta. Presiona escape para cerrar la ventana"
 	},
 	"text" : {
 		"element" : "p",
 		"objAttrs": {
 			"innerHTML" : "data",
 			"id" : "'modal-content'"
-		}
-	},
-	"image" : {
-		"element" : "img",
-		"objAttrs" : {
-			"onload" : "function() {modal.md.style.width = this.width + 'px'; modal.mi.style.width = this.width + 'px'; modal.mb.appendChild(this); modal.display('block'); jQuery('#modal-content').focus(); };",
-			"src" : "data"
-		},	
-		"attrs" : {
-			"'onclick'" : "args.content.onClick"
-		},
-		"dfts" : {
-			"shape" : "'modalShape-image'",
-			"shapeStyle" : "''",
-			"layout" : "''"
-			"mb_clase" : "'modalContent-image'",
-			"acc" : "'Ventana modal abierta. Presiona escape para cerrar la ventana'"
 		}
 	}
 }

@@ -15,11 +15,11 @@ function Modal(args){
 	this.args = args;
 
 	//Default values
-	this.shape = "";
+	this.shapeClassname = "";
 	this.shapeStyle = "";
 	this.layout = "";
 	this.icon = "";
-	this.mb_clase = "";
+	this.contentClassname = "";
 	this.acc = "";
 
 	this.changevisible = function(display) {
@@ -93,16 +93,35 @@ function Modal(args){
 			this.keys["27"] = "";
 		}
 
-		$.getJSON('modal.json').done(function (data) {
+		
+		var plugins;
+		url = "js/modal.json";
+		if (typeof window['urlModal'] !== 'undefined') {
+			url = window['urlModal'];
+		}
+		$.getJSON(url).done(function (data) {
 			var args = modal.args;
+
+			for(var dft in data.dfts){
+				try {
+					if(data.dfts[dft] != null){
+				    	window['modal'][dft] = data.dfts[dft];
+				    }
+				}
+				catch(err) {
+				    console.log(err.message);
+				    return false;
+				}
+			}
+
 			/* Tipo de dato */
 			var type = (args.content != null && args.content.type != null && (!args.content.type.length == 0)) ? args.content.type : "text";
-
 			var plugin = data[type];
 
 			/* Accesibilidad */
 			modal.desc.innerHTML = (args.acc != null && args.acc.text != null && (!args.acc.text.length == 0)) ? args.acc.text : modal.acc;
 			modal.setClassName(modal.desc,"only-reader");
+			
 
 			if(plugin == null){
 				console.log("El plugin que usted eligio no existe");
@@ -113,8 +132,8 @@ function Modal(args){
 			data = (args.content != null && args.content.data != null && (!args.content.data.length == 0)) ? args.content.data : "";
 			for(var dft in plugin.dfts){
 				try {
-					if(eval(plugin.dfts[dft]) != null){
-				    	eval("modal."+dft+" = "+plugin.dfts[dft]);
+					if(plugin.dfts[dft] != null){
+				    	window['modal'][dft] = plugin.dfts[dft];
 				    }
 				}
 				catch(err) {
@@ -124,7 +143,7 @@ function Modal(args){
 			}
 
 			/* Shape */		
-			modal.setClassName(modal.md, (args.shape != null && args.shape.className != null && (!args.shape.className.length == 0)) ? "modalShape-"+args.shape.className : modal.shape);
+			modal.setClassName(modal.md, (args.shape != null && args.shape.className != null && (!args.shape.className.length == 0)) ? "modalShape-"+args.shape.className : modal.shapeClassname);
 
 			/* Style */			
 			modal.setClassName(modal.md, (args.shape != null && args.shape.style != null && (!args.shape.style.length == 0)) ? "modalStyle-"+args.shape.style : modal.shapeStyle);
@@ -140,7 +159,7 @@ function Modal(args){
 			}
 
 			/* Content - Contenido */
-			modal.setClassName(modal.mb, (args.content != null && args.content.className != null && (!args.content.className.length == 0)) ? "modalContent-"+args.content.className : modal.mb_clase);
+			modal.setClassName(modal.mb, (args.content != null && args.content.className != null && (!args.content.className.length == 0)) ? "modalContent-"+args.content.className : modal.contentClassname);
 
 			/* Close - Cerrar */
 			if(args.close == null || args.close.button == null || args.close.button){
@@ -212,22 +231,22 @@ function Modal(args){
 
 			for(var objAttr in plugin.objAttrs){
 				try {
-			    	eval("elem."+objAttr+" = "+plugin.objAttrs[objAttr]);
+					if(eval(plugin.objAttrs[objAttr])!= null){ //Por la explicacion de abajo es por que valido esto.
+			    		elem[objAttr] = eval(plugin.objAttrs[objAttr]);//El eval va por que dentro de objAttrs pueden pasarse tambien variables dentro de los parametros del modal. Ejemplo args.content.data | width | y crear otros attrs.
+			    	}
 				}
 				catch(err) {
 				    console.log(err.message);
-				    return false;
 				}
 			}
 			for(var attr in plugin.attrs){
 				try {
 					if(eval(plugin.attrs[attr]) != null){
-					    eval("elem.setAttribute("+attr+","+plugin.attrs[attr]+")");
+					    elem.setAttribute(attr,eval(plugin.attrs[attr]));
 					}
 				}
 				catch(err) {
 				    console.log(err.message);
-				    return false;
 				}
 			}
 			modal.mb.appendChild(elem);
