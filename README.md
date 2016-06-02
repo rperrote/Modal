@@ -1,4 +1,4 @@
-# modal.js
+# Modal.js
 
 > A modern and simple modal
 
@@ -88,7 +88,7 @@ The parameter is json with this structure:
 
 #### Pro mode
 
-You can modify defaults plugins.json and create diferents templates of modal. Plugins.json have this structure:
+You can modify defaults modal.json and create diferents templates of modal. Plugins.json have this structure:
 
 ```javascript
 "text" : {                                   //<-- Name for plugin.
@@ -114,26 +114,42 @@ Use text plugin for guide you.
 
 #### God mode
 
-By default, Chrome on OS X and Safari on OS X allow very limited styling of
-`select`, unless a border property is set. The default font weight on `optgroup`
-elements cannot safely be changed in Chrome on OSX and Safari on OS X.
+Not only can create a diferents templates of same modal, diferents modal too!
+You have access a args. Parameter of modal, and you add custom variables on parameters.
 
+I create a youtube video modal:
+
+```javascript
+"iframe" : {
+    "element" : "iframe",
+    "objAttrs" :{
+        "id": "'mFrame-content'",
+        "width": "args.content.width",
+        "height": "args.content.height",
+        "src" : "data"
+	},
+	"attrs" : {
+      "'frameborder'" : "'0'",
+      "'allowfullscreen'" : "''",
+      "'mozallowfullscreen'" : "''",
+      "'webkitallowfullscreen'" : "''",
+      "'hspace'" : "'0'",
+      "'vspace'" : "'0'",
+      "'scrolling'" : "'auto'"
+	}
+}
+```
 
 ## Acknowledgements
 
-Normalize.css is a project by [Nicolas Gallagher](https://github.com/necolas),
-co-created with [Jonathan Neal](https://github.com/jonathantneal).
+Modal.js is a project by [Rodrigo Perrote](https://github.com/rperrote).
 
 
-[changelog-image]: https://img.shields.io/badge/changelog-md-blue.svg?style=flat-square
+[changelog-image]: https://img.shields.io/badge/changelog-md-blue.svg?style=flat
+[changelog-url]: CHANGELOG.md
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-url]: LICENSE.md
 [npm-image]: https://img.shields.io/badge/npm-1.0-blue.svg?style=flat
-[npm-url]: https://www.npmjs.com/package/normalize.css
-[gitter-image]: https://img.shields.io/badge/chat-gitter-blue.svg?style=flat-square
-[gitter-url]: https://gitter.im/necolas/normalize.css
-
-
-
+[npm-url]: https://www.npmjs.com/package/modal.js
 
 
