@@ -82,24 +82,16 @@ The parameter is json with this structure:
 
 #### Pro mode
 
-You can modify defaults modal.json and create different templates of modal. Plugins.json have this structure:
+You can modify defaults modal.json.
 
 ```javascript
-"text" : {                                   //<-- Name for plugin.
-    "element" : "",						     //<-- Parent element of content.
-	"objAttrs": {							 //<-- Set attr to element. elm.attr = value  
-	    "innerHTML" : "",
-		"id" : ""
-	},
-    'attrs' : {                              //<-- Set attr to element. elm.setAttribute(attr, value)
-    },
-	"dfts" : {							     //<-- Overwrite defaults
-		"shape" : "",
-		"shapeStyle" : "",
-		"layout" : "",
-		"icon" : "",
-		"mb_clase" : ""
-	}
+"dfts" : {
+    "shapeClassname":"modalShape-dft",
+    "shapeStyle":"modalStyle-dft",
+    "layout":"modalType-dft",
+    "icon":"",
+    "contentClassname":"modalContent-dft",
+    "acc":"Ventana modal abierta. Presiona escape para cerrar la ventana"
 }
 ```
 
@@ -114,25 +106,35 @@ You have access a args (parameter of modal), and you add custom variables on par
 I create a youtube video modal:
 
 ```javascript
-"iframe" : {
-    "element" : "iframe",
-    "objAttrs" :{
-        "id": "'mFrame-content'",
-        "width": "args.content.width",
-        "height": "args.content.height",
-        "src" : "data"
+"iframe" : {                             //<-- name of new plugin or modal type.
+    "element" : "iframe",				 //<-- element create on body of modal
+    "objAttrs" :{						 //<-- objAttrs set attributes on obj element
+        "id": "'mFrame-content'",   	 //<-- iframe.id
+        "width": "args.content.width",   //<-- iframe.width
+        "height": "args.content.height", //<-- iframe.height
+        "src" : "data"					 //<-- iframe.src
 	},
-	"attrs" : {
-      "'frameborder'" : "'0'",
-      "'allowfullscreen'" : "''",
-      "'mozallowfullscreen'" : "''",
-      "'webkitallowfullscreen'" : "''",
-      "'hspace'" : "'0'",
-      "'vspace'" : "'0'",
-      "'scrolling'" : "'auto'"
+	"attrs" : {							 //<-- attrs set attributes on dom element
+        "'frameborder'" : "'0'",		 //<-- iframe.setAttribute("frameborder","0")
+        "'allowfullscreen'" : "''",	     //<-- iframe.setAttribute("allowfullscreen","")
+        "'mozallowfullscreen'" : "''",   
+        "'webkitallowfullscreen'" : "''",
+        "'hspace'" : "'0'",
+        "'vspace'" : "'0'",
+        "'scrolling'" : "'auto'"
+	},
+    "dfts" : {
+        "shapeClassname":"",
+        "shapeStyle":"",
+        "layout":"",
+        "icon":"",
+        "contentClassname":"",
+        "acc":""
 	}
 }
 ```
+**NOTE:Important! objAttrs and attrs is under eval. You can use variables of args (parameter of modal) and set new parameters. Example: width, height and id. If you pass string need double quotes "''".**
+
 
 #### Json url
 
