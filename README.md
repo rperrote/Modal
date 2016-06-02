@@ -83,7 +83,7 @@ The parameter is json with this structure:
 
 #### Pro mode
 
-You can modify defaults modal.json and create diferents templates of modal. Plugins.json have this structure:
+You can modify defaults modal.json and create different templates of modal. Plugins.json have this structure:
 
 ```javascript
 "text" : {                                   //<-- Name for plugin.
@@ -109,7 +109,7 @@ Use text plugin for guide you.
 
 #### God mode
 
-Not only can create a diferents templates of same modal, diferents modal too!
+Not only can create a different templates of same modal, different modal too!
 You have access a args (parameter of modal), and you add custom variables on parameters.
 
 I create a youtube video modal:
@@ -144,5 +144,5 @@ Modal.js is a project by [Rodrigo Perrote](https://github.com/rperrote).
 [changelog-url]: CHANGELOG.md
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-url]: LICENSE.md
-[npm-image]: https://img.shields.io/badge/npm-1.0-blue.svg?style=flat
+[npm-image]: https://img.shields.io/badge/npm-1.1.0-blue.svg?style=flat
 [npm-url]: https://www.npmjs.com/package/modal.js
