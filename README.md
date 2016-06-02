@@ -115,13 +115,13 @@ I create a youtube video modal:
         "src" : "data"					 //<-- iframe.src
 	},
 	"attrs" : {							 //<-- attrs set attributes on dom element
-        "'frameborder'" : "'0'",		 //<-- iframe.setAttribute("frameborder","0")
-        "'allowfullscreen'" : "''",	     //<-- iframe.setAttribute("allowfullscreen","")
-        "'mozallowfullscreen'" : "''",   
-        "'webkitallowfullscreen'" : "''",
-        "'hspace'" : "'0'",
-        "'vspace'" : "'0'",
-        "'scrolling'" : "'auto'"
+        "frameborder" : "'0'",		 //<-- iframe.setAttribute("frameborder","0")
+        "allowfullscreen" : "''",	     //<-- iframe.setAttribute("allowfullscreen","")
+        "mozallowfullscreen" : "''",   
+        "webkitallowfullscreen" : "''",
+        "hspace" : "'0'",
+        "vspace" : "'0'",
+        "scrolling" : "'auto'"
 	},
     "dfts" : {
         "shapeClassname":"",
