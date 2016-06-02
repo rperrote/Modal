@@ -143,7 +143,7 @@ Url of "plugins" or types of modals need this structure:
 * js/modal.js
 
 but before call modal js you can overwrite url:
-urlModal = "js/modal.json"; -> Default
+urlModal = "js/modal.json" -> Default
 
 
 ## Acknowledgements
