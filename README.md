@@ -11,11 +11,6 @@
 npm install --save modal.js
 ```
 
-**Download**
-
-See https://necolas.github.io/normalize.css/latest/normalize.css
-
-
 ## What does it do?
 
 * Build a modal customizable.
