@@ -21,6 +21,7 @@ function Modal(args){
 	this.icon = "";
 	this.contentClassname = "";
 	this.acc = "";
+	this.show = "automatic";
 
 	this.changevisible = function(display) {
 		if("none" == display){
@@ -80,7 +81,7 @@ function Modal(args){
     	}
 	};
 
-	this.show = function (){
+	this.create = function (){
 		/* Guardo el ultimo focus - Accesibilidad */
 		this.exFocus = jQuery(document.activeElement);
 		/* Elimino datos de anterior modal si es que hubo. */
@@ -258,10 +259,12 @@ function Modal(args){
 				}
 			}
 			modal.mb.appendChild(elem);
-			modal.display("block");
-			jQuery("#modal-content").focus();
-			jQuery("#modal-box").width((!args.width || args.width == "auto" || args.width == "") ? jQuery("#modal-content").width() : args.width);
-			jQuery("#modal-inner").width(jQuery("#modal-box").outerWidth());
+			if(modal.show === "automatic"){
+				modal.display("block");
+				jQuery("#modal-content").focus();
+				jQuery("#modal-box").width((!args.width || args.width == "auto" || args.width == "") ? jQuery("#modal-content").width() : args.width);
+				jQuery("#modal-inner").width(jQuery("#modal-box").outerWidth());
+			}
 		}).fail(function( jqxhr, textStatus, error ) {
 		    var err = textStatus + ", " + error;
 		    console.log( "Request Failed: " + err );
@@ -350,7 +353,7 @@ function Modal(args){
 	if(this.args == null){
 		return true;
 	}else{
-		this.show(this.args);
+		this.create(this.args);
 	}
 };
 
