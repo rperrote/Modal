@@ -1,0 +1,50 @@
+{
+	"dfts" : {
+		"shapeClassname":"modalShape-dft",
+		"shapeStyle":"modalStyle-dft",
+		"layout":"modalType-dft",
+		"icon":"",
+		"contentClassname":"modalContent-dft",
+		"acc":"Ventana modal abierta. Presiona escape para cerrar la ventana"
+	},
+	"text" : {
+		"element" : "p",
+		"objAttrs": {
+			"innerHTML" : "data",
+			"id" : "'modal-content'"
+		}
+	},
+	"image" : {
+		"element" : "img",
+		"objAttrs" : {
+			"onload" : "function() {modal.md.style.width = this.width + 'px'; modal.mi.style.width = this.width + 'px'; modal.mb.appendChild(this); modal.display('block'); jQuery('#modal-content').focus(); };",
+			"src" : "data"
+		},
+		"dfts" : {
+			"shapeClassname" : "'modalShape-image'",
+			"shapeStyle" : "",
+			"layout" : "",
+			"icon" : "",
+			"contentClassname" : "'modalContent-image'",
+			"acc" : "'Ventana modal abierta. Presiona escape para cerrar la ventana'"
+		}
+	},
+	"iframe" : {
+		"element" : "iframe",
+		"objAttrs" :{
+			"id": "'mFrame-content'",
+			"width": "args.content.width",
+			"height": "args.content.height",
+			"src" : "data"
+		},
+		"attrs" : {
+			"'frameborder'" : "'0'",
+			"'allowfullscreen'" : "''",
+			"'mozallowfullscreen'" : "''",
+			"'webkitallowfullscreen'" : "''",
+			"'hspace'" : "'0'",
+			"'vspace'" : "'0'",
+			"'scrolling'" : "'auto'"
+		}
+	}
+}

@@ -8,6 +8,8 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    
+    <link rel="stylesheet" type="text/css" href="stylesheets/modal.css" media="screen">
   </head>
   <body>
     <section class="page-header">
@@ -37,7 +39,7 @@
 
 <ul>
 <li>Build a modal customizable.</li>
-<li>By default create text, image modal.</li>
+<li>By default create text.</li>
 <li>You can customize it with parameters</li>
 <li>Its possible to create different styles of the same modal and then choose one</li>
 </ul>
@@ -60,6 +62,9 @@
 
 <div class="highlight highlight-source-js"><pre><span class="pl-en">$</span>().<span class="pl-en">modal</span>({<span class="pl-s"><span class="pl-pds">"</span>content<span class="pl-pds">"</span></span><span class="pl-k">:</span> {<span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Hola mundo!<span class="pl-pds">"</span></span> }});
 <span class="pl-en">$</span>().<span class="pl-en">modal</span>({<span class="pl-s"><span class="pl-pds">"</span>content<span class="pl-pds">"</span></span><span class="pl-k">:</span> {<span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>image<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>http://lorempixel.com/400/200/<span class="pl-pds">"</span></span>}})</pre></div>
+
+<a onclick='$().modal({"content": {"type":"text","data": "Hola mundo!" }});' class="btn modal">Text modal</a>
+<a onclick='$().modal({"content": {"type":"image", "data": "http://lorempixel.com/400/200/"}});' class="btn modal">Image modal</a>
 
 <h4>
 <a id="newbie-mode" class="anchor" href="#newbie-mode" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Newbie mode</h4>
@@ -155,6 +160,8 @@ You have access a args (parameter of modal), and you add custom variables on par
     }
 }</pre></div>
 
+<a onclick='$().modal({"content": {"data": "https://www.youtube.com/embed/SeMKKprqCFY","type":"iframe" },"shape":{"className":"iframe"}});' class="btn modal">Youtube modal</a>
+
 <h2>
 <a id="acknowledgements" class="anchor" href="#acknowledgements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Acknowledgements</h2>
 
@@ -170,4 +177,9 @@ You have access a args (parameter of modal), and you add custom variables on par
 
   
   </body>
+  <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
+  <script type="text/javascript">
+      urlModal = "javascripts/modal.json";
+  </script>
+  <script type="text/javascript" src="javascripts/modal.js"></script>
 </html>
