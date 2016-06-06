@@ -1,6 +1,14 @@
 # Changes to modal.js
 
-### 1.1.0 (June 02, 2016)
+### 1.0.8 (June 06, 2016)
+
+* Created a proyect page.
+* Re-work on eval of objAttr and attr on modal.json
+* Now you pass functions on modal.json (image modal example)
+* Add default show modal.
+
+
+### 1.0.1 (June 02, 2016)
 
 * Change eval from dftls reads for windows['variable'].
 * Reorganized proyect.
