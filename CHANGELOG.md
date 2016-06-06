@@ -1,6 +1,6 @@
 # Changes to modal.js
 
-### 1.0.8 (June 06, 2016)
+### 1.1.2 (June 06, 2016)
 
 * Created a proyect page.
 * Re-work on eval of objAttr and attr on modal.json
