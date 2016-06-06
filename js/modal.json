@@ -13,5 +13,20 @@
 			"innerHTML" : "data",
 			"id" : "'modal-content'"
 		}
+	},
+	"image" : {
+		"element" : "img",
+		"objAttrs" : {
+			"onload" : "function() {modal.md.style.width = this.width + 'px'; modal.mi.style.width = this.width + 'px'; modal.mb.appendChild(this); modal.display('block'); jQuery('#modal-content').focus(); };",
+			"src" : "data"
+		},
+		"dfts" : {
+			"shapeClassname" : "'modalShape-image'",
+			"shapeStyle" : "",
+			"layout" : "",
+			"icon" : "",
+			"contentClassname" : "'modalContent-image'",
+			"acc" : "'Ventana modal abierta. Presiona escape para cerrar la ventana'"
+		}
 	}
 }

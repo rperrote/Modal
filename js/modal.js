@@ -236,7 +236,11 @@ function Modal(args){
 			    	}
 				}
 				catch(err) {
-				    console.log(err.message);
+					try{
+				    	eval("elem."+objAttr+" = "+plugin.objAttrs[objAttr]);
+				    }catch(err){
+				    	console.log("error: "+err);
+				    }
 				}
 			}
 			for(var attr in plugin.attrs){
@@ -246,7 +250,11 @@ function Modal(args){
 					}
 				}
 				catch(err) {
-				    console.log(err.message);
+					try{
+				    	eval("elem.setAttribute("+attr+","+plugin.attrs[attr]+")");
+					}catch(err){
+						console.log("error "+err);
+					}
 				}
 			}
 			modal.mb.appendChild(elem);
