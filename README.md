@@ -86,12 +86,13 @@ You can modify defaults modal.json.
 
 ```javascript
 "dfts" : {
-    "shapeClassname":"modalShape-dft",
+    "shapeClassname":"modalShape-dft",  
     "shapeStyle":"modalStyle-dft",
     "layout":"modalType-dft",
     "icon":"",
     "contentClassname":"modalContent-dft",
-    "acc":"Ventana modal abierta. Presiona escape para cerrar la ventana"
+    "acc":"Ventana modal abierta. Presiona escape para cerrar la ventana",
+    "show": ""
 }
 ```
 
