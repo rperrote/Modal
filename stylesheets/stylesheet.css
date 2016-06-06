@@ -28,17 +28,6 @@ a {
   .btn + .btn {
     margin-left: 1rem; }
 
-.btn.modal{
-  border-color: #159957;
-  color: #159957;
-}
-
-.btn.modal:hover{
-  background-color: #159957;
-  border-color: rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.8);
-}
-
 .btn:hover {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
@@ -254,6 +243,3 @@ a {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
-
-.modalShape-iframe {border-radius: 20px 0; padding: 30px;}
-#modal-body.modalContent-dft iframe{display: block; height: 350px; width: 900px; }

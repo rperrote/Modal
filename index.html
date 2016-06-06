@@ -8,8 +8,6 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    
-    <link rel="stylesheet" type="text/css" href="stylesheets/modal.css" media="screen">
   </head>
   <body>
     <section class="page-header">
@@ -28,7 +26,7 @@
 <p>A modern and simple modal</p>
 </blockquote>
 
-<p><a href="https://www.npmjs.com/package/modal.js"><img src="https://img.shields.io/badge/npm-1.1.0-blue.svg?style=flat" alt="npm"></a> <a href="https://github.com/rperrote/Modal/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="license"></a> <a href="https://github.com/rperrote/Modal/blob/master/CHANGELOG.md"><img src="https://img.shields.io/badge/changelog-md-blue.svg?style=flat" alt="changelog"></a></p>
+<p><a href="https://www.npmjs.com/package/modal.js"><img src="https://img.shields.io/badge/npm-1.0.7-blue.svg?style=flat" alt="npm"></a> <a href="LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="license"></a> <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/changelog-md-blue.svg?style=flat" alt="changelog"></a></p>
 
 <p><strong>NPM</strong></p>
 
@@ -39,7 +37,7 @@
 
 <ul>
 <li>Build a modal customizable.</li>
-<li>By default create text.</li>
+<li>By default create text, image modal.</li>
 <li>You can customize it with parameters</li>
 <li>Its possible to create different styles of the same modal and then choose one</li>
 </ul>
@@ -62,9 +60,6 @@
 
 <div class="highlight highlight-source-js"><pre><span class="pl-en">$</span>().<span class="pl-en">modal</span>({<span class="pl-s"><span class="pl-pds">"</span>content<span class="pl-pds">"</span></span><span class="pl-k">:</span> {<span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Hola mundo!<span class="pl-pds">"</span></span> }});
 <span class="pl-en">$</span>().<span class="pl-en">modal</span>({<span class="pl-s"><span class="pl-pds">"</span>content<span class="pl-pds">"</span></span><span class="pl-k">:</span> {<span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>image<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>http://lorempixel.com/400/200/<span class="pl-pds">"</span></span>}})</pre></div>
-
-<a onclick='$().modal({"content": {"type":"text","data": "Hola mundo!" }});' class="btn modal">Text modal</a>
-<a onclick='$().modal({"content": {"type":"image", "data": "http://lorempixel.com/400/200/"}});' class="btn modal">Image modal</a>
 
 <h4>
 <a id="newbie-mode" class="anchor" href="#newbie-mode" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Newbie mode</h4>
@@ -112,23 +107,16 @@
 <h4>
 <a id="pro-mode" class="anchor" href="#pro-mode" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pro mode</h4>
 
-<p>You can modify defaults modal.json and create different templates of modal. Plugins.json have this structure:</p>
+<p>You can modify defaults modal.json.</p>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-k">:</span> {                                   <span class="pl-c">//&lt;-- Name for plugin.</span>
-    <span class="pl-s"><span class="pl-pds">"</span>element<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,                          <span class="pl-c">//&lt;-- Parent element of content.</span>
-    <span class="pl-s"><span class="pl-pds">"</span>objAttrs<span class="pl-pds">"</span></span><span class="pl-k">:</span> {                            <span class="pl-c">//&lt;-- Set attr to element. elm.attr = value  </span>
-        <span class="pl-s"><span class="pl-pds">"</span>innerHTML<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
-        <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>
-    },
-    <span class="pl-s"><span class="pl-pds">'</span>attrs<span class="pl-pds">'</span></span> <span class="pl-k">:</span> {                              <span class="pl-c">//&lt;-- Set attr to element. elm.setAttribute(attr, value)</span>
-    },
-    <span class="pl-s"><span class="pl-pds">"</span>dfts<span class="pl-pds">"</span></span> <span class="pl-k">:</span> {                               <span class="pl-c">//&lt;-- Overwrite defaults</span>
-        <span class="pl-s"><span class="pl-pds">"</span>shape<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
-        <span class="pl-s"><span class="pl-pds">"</span>shapeStyle<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
-        <span class="pl-s"><span class="pl-pds">"</span>layout<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
-        <span class="pl-s"><span class="pl-pds">"</span>icon<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
-        <span class="pl-s"><span class="pl-pds">"</span>mb_clase<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>
-    }
+<div class="highlight highlight-source-js"><pre><span class="pl-s"><span class="pl-pds">"</span>dfts<span class="pl-pds">"</span></span> <span class="pl-k">:</span> {
+    <span class="pl-s"><span class="pl-pds">"</span>shapeClassname<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>modalShape-dft<span class="pl-pds">"</span></span>,  
+    <span class="pl-s"><span class="pl-pds">"</span>shapeStyle<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>modalStyle-dft<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>layout<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>modalType-dft<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>icon<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>contentClassname<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>modalContent-dft<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>acc<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>Ventana modal abierta. Presiona escape para cerrar la ventana<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>show<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>
 }</pre></div>
 
 <p>Use text plugin for guide you.</p>
@@ -141,26 +129,48 @@ You have access a args (parameter of modal), and you add custom variables on par
 
 <p>I create a youtube video modal:</p>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-s"><span class="pl-pds">"</span>iframe<span class="pl-pds">"</span></span> <span class="pl-k">:</span> {
-    <span class="pl-s"><span class="pl-pds">"</span>element<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>iframe<span class="pl-pds">"</span></span>,
-    <span class="pl-s"><span class="pl-pds">"</span>objAttrs<span class="pl-pds">"</span></span> <span class="pl-k">:</span>{
-        <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>'mFrame-content'<span class="pl-pds">"</span></span>,
-        <span class="pl-s"><span class="pl-pds">"</span>width<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>args.content.width<span class="pl-pds">"</span></span>,
-        <span class="pl-s"><span class="pl-pds">"</span>height<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>args.content.height<span class="pl-pds">"</span></span>,
-        <span class="pl-s"><span class="pl-pds">"</span>src<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span>
+<div class="highlight highlight-source-js"><pre><span class="pl-s"><span class="pl-pds">"</span>iframe<span class="pl-pds">"</span></span> <span class="pl-k">:</span> {                             <span class="pl-c">//&lt;-- name of new plugin or modal type.</span>
+    <span class="pl-s"><span class="pl-pds">"</span>element<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>iframe<span class="pl-pds">"</span></span>,                <span class="pl-c">//&lt;-- element create on body of modal</span>
+    <span class="pl-s"><span class="pl-pds">"</span>objAttrs<span class="pl-pds">"</span></span> <span class="pl-k">:</span>{                        <span class="pl-c">//&lt;-- objAttrs set attributes on obj element</span>
+        <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>'mFrame-content'<span class="pl-pds">"</span></span>,        <span class="pl-c">//&lt;-- iframe.id</span>
+        <span class="pl-s"><span class="pl-pds">"</span>width<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>args.content.width<span class="pl-pds">"</span></span>,   <span class="pl-c">//&lt;-- iframe.width</span>
+        <span class="pl-s"><span class="pl-pds">"</span>height<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>args.content.height<span class="pl-pds">"</span></span>, <span class="pl-c">//&lt;-- iframe.height</span>
+        <span class="pl-s"><span class="pl-pds">"</span>src<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span>                   <span class="pl-c">//&lt;-- iframe.src</span>
     },
-    <span class="pl-s"><span class="pl-pds">"</span>attrs<span class="pl-pds">"</span></span> <span class="pl-k">:</span> {
-      <span class="pl-s"><span class="pl-pds">"</span>'frameborder'<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>'0'<span class="pl-pds">"</span></span>,
-      <span class="pl-s"><span class="pl-pds">"</span>'allowfullscreen'<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>''<span class="pl-pds">"</span></span>,
-      <span class="pl-s"><span class="pl-pds">"</span>'mozallowfullscreen'<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>''<span class="pl-pds">"</span></span>,
-      <span class="pl-s"><span class="pl-pds">"</span>'webkitallowfullscreen'<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>''<span class="pl-pds">"</span></span>,
-      <span class="pl-s"><span class="pl-pds">"</span>'hspace'<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>'0'<span class="pl-pds">"</span></span>,
-      <span class="pl-s"><span class="pl-pds">"</span>'vspace'<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>'0'<span class="pl-pds">"</span></span>,
-      <span class="pl-s"><span class="pl-pds">"</span>'scrolling'<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>'auto'<span class="pl-pds">"</span></span>
+    <span class="pl-s"><span class="pl-pds">"</span>attrs<span class="pl-pds">"</span></span> <span class="pl-k">:</span> {                          <span class="pl-c">//&lt;-- attrs set attributes on dom element</span>
+        <span class="pl-s"><span class="pl-pds">"</span>frameborder<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>'0'<span class="pl-pds">"</span></span>,       <span class="pl-c">//&lt;-- iframe.setAttribute("frameborder","0")</span>
+        <span class="pl-s"><span class="pl-pds">"</span>allowfullscreen<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>''<span class="pl-pds">"</span></span>,        <span class="pl-c">//&lt;-- iframe.setAttribute("allowfullscreen","")</span>
+        <span class="pl-s"><span class="pl-pds">"</span>mozallowfullscreen<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>''<span class="pl-pds">"</span></span>,   
+        <span class="pl-s"><span class="pl-pds">"</span>webkitallowfullscreen<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>''<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>hspace<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>'0'<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>vspace<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>'0'<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>scrolling<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>'auto'<span class="pl-pds">"</span></span>
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>dfts<span class="pl-pds">"</span></span> <span class="pl-k">:</span> {
+        <span class="pl-s"><span class="pl-pds">"</span>shapeClassname<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>shapeStyle<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>layout<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>icon<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>contentClassname<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>acc<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>
     }
 }</pre></div>
 
-<a onclick='$().modal({"content": {"data": "https://www.youtube.com/embed/SeMKKprqCFY","type":"iframe" },"shape":{"className":"iframe"}});' class="btn modal">Youtube modal</a>
+<p><strong>NOTE: Important! objAttrs and attrs is under eval. You can use variables of args (parameter of modal) and set new parameters. Example: width, height and id. If you pass string need double quotes " ' ' ".</strong></p>
+
+<h4>
+<a id="json-url" class="anchor" href="#json-url" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Json url</h4>
+
+<p>Url of "plugins" or types of modals need this structure:</p>
+
+<ul>
+<li>index.html -&gt; calls modal js</li>
+<li>js/modal.json</li>
+<li>js/modal.js</li>
+</ul>
+
+<p>but before call modal js you can overwrite url:
+urlModal = "js/modal.json" -&gt; Default</p>
 
 <h2>
 <a id="acknowledgements" class="anchor" href="#acknowledgements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Acknowledgements</h2>
@@ -177,9 +187,4 @@ You have access a args (parameter of modal), and you add custom variables on par
 
   
   </body>
-  <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
-  <script type="text/javascript">
-      urlModal = "javascripts/modal.json";
-  </script>
-  <script type="text/javascript" src="javascripts/modal.js"></script>
 </html>
