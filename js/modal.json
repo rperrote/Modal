@@ -5,7 +5,8 @@
 		"layout":"modalType-dft",
 		"icon":"",
 		"contentClassname":"modalContent-dft",
-		"acc":"Ventana modal abierta. Presiona escape para cerrar la ventana"
+		"acc":"Ventana modal abierta. Presiona escape para cerrar la ventana",
+		"show": "automatic"
 	},
 	"text" : {
 		"element" : "p",
@@ -26,7 +27,8 @@
 			"layout" : "",
 			"icon" : "",
 			"contentClassname" : "'modalContent-image'",
-			"acc" : "'Ventana modal abierta. Presiona escape para cerrar la ventana'"
+			"acc" : "'Ventana modal abierta. Presiona escape para cerrar la ventana'",
+			"show": "none"
 		}
 	}
 }
