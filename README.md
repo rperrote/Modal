@@ -157,5 +157,5 @@ Modal.js is a project by [Rodrigo Perrote](https://github.com/rperrote).
 [changelog-url]: CHANGELOG.md
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-url]: LICENSE.md
-[npm-image]: https://img.shields.io/badge/npm-1.0.7-blue.svg?style=flat
+[npm-image]: https://img.shields.io/badge/npm-1.0.8-blue.svg?style=flat
 [npm-url]: https://www.npmjs.com/package/modal.js
