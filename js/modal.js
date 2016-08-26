@@ -233,7 +233,16 @@ function Modal(args){
 			for(var objAttr in plugin.objAttrs){
 				try {
 					if(eval(plugin.objAttrs[objAttr])!= null){ //Por la explicacion de abajo es por que valido esto.
-			    		elem[objAttr] = eval(plugin.objAttrs[objAttr]);//El eval va por que dentro de objAttrs pueden pasarse tambien variables dentro de los parametros del modal. Ejemplo args.content.data | width | y crear otros attrs.
+						if(elem[objAttr]){
+		    				elem[objAttr] = eval(plugin.objAttrs[objAttr]);//El eval va por que dentro de objAttrs pueden pasarse tambien variables dentro de los parametros del modal. Ejemplo args.content.data | width | y crear otros attrs.
+			    		}else{
+			    			try{
+					    		eval("elem."+objAttr+" = "+plugin.objAttrs[objAttr]);
+		    				}catch(err){
+				    			console.log("error: "+err);
+				    		}
+			    		}
+
 			    	}
 				}
 				catch(err) {
@@ -258,6 +267,7 @@ function Modal(args){
 					}
 				}
 			}
+			
 			modal.mb.appendChild(elem);
 			if(modal.show === "automatic"){
 				modal.display("block");
